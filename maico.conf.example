@@ -1,0 +1,6 @@
+#url maico
+ip_maico=XXX.XXX.XXX.XXX
+#url jeedom
+jeedom_ip=127.0.0.1
+jeedom_apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+#http://${jeedom_ip}/core/api/jeeApi.php?plugin=virtual&apikey=${jeedom_api}&type=virtual&id=${jeedom_id}&value=${value}

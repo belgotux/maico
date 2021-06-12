@@ -4,34 +4,17 @@
 # Site : www.monlinux.net
 # Adresse : belgotux@monlinux.net
 
-#url maico
-ip_maico=X.X.X.X
-#url jeedom
-jeedom_ip=127.0.0.1
-jeedom_apikey=
-#http://${jeedom_ip}/core/api/jeeApi.php?plugin=virtual&apikey=${jeedom_api}&type=virtual&id=${jeedom_id}&value=${value}
 
-#Nom,Unité,ligne,jeedom_id
-list_details="Niveau,,1,854
-Débit d’air,m³/h,3,855
-Vitesse air entrant,rpm,4,856
-Vitesse air sortant,rpm,5,857
-Remplacement fitre interne,J,6,858
-Remplacement filtre externe,J,8,859
-T° référence pièce,°c,12,860
-T° entrée ext,°c,14,861
-T° air entrant,°c,15,862
-T° air sortant,°c,16,863
-T° sortie ext,°c,17,864
-Humidité,%,18,865
-Etat Ventilateur d'air entrant,Bool,25,866
-Etat Ventilateur d'air sortant,Bool,26,867
-Bypass,Bool,27,868
-Registre de chauffe,Bool ,28,869
-Contact sec,Bool,29,870"
-list_index="Mode,,1,896
-Saison,,9,900
-Alarme,,14,1181"
+MY_PATH="`dirname \"$0\"`"
+confdir="$MY_PATH"
+
+# configuration of your network
+if [ ! -f $confdir/maico.conf ] ; then   echo "Error : please create config file maico.conf based on maico.conf.example first!" ; exit 1 ; fi
+source $confdir/maico.conf
+
+# configuration of the virtual in jeedom
+if [ ! -f $confdir/mapping_virtual_jeedom.conf ] ; then   echo "Error : please add the mapping_virtual_jeedom.conf file in $confdir" ; exit 1 ; fi
+source $confdir/mapping_virtual_jeedom.conf
 
 #dependances
 if [ ! -f /usr/bin/curl ] ; then        echo "Error : curl not present, install curl" ; exit 1 ; fi
