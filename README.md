@@ -42,4 +42,4 @@ Your need this packages : curl libc-bin libxml2-utils
 ## Help 
 Read the wiki to create all the stuff on Jeedom.
 
-I can give help on the jeedom community, the link is comming...
+I can give help on the [jeedom community](https://community.jeedom.com/t/vmc-maico-obtenir-les-infos-et-commandes/63164)
