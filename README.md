@@ -14,7 +14,7 @@ I'm open to work with a dev on a plugin, I'm only a sysadmin :)
 
 ## Maico firmware
 
-My maico 320KB is based on a firmware 1.1.0, maybe the xml on your Maico can change if you have another version and the script need adaptation. Please send me the difference if you have another firmware version.
+My maico WS320KB is based on a firmware 1.1.0, maybe the xml on your Maico can change if you have another version and the script need adaptation. Please send me the difference if you have another firmware version.
 
 ## language
 
@@ -37,7 +37,7 @@ xml_details=$(curl -s --basic --user admin: http://$ip_maico/details.cgx | iconv
 
 
 ## requirement
-Your need this packages : curl libc-bin libxml2-utils
+Your need this packages : `curl libc-bin libxml2-utils`
 
 ## Help 
 Read the wiki to create all the stuff on Jeedom.
