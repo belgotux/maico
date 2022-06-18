@@ -54,7 +54,7 @@ while read line ; do
 
         #exécution uniquement pour les command crée sur le virtuel
         if [ "$jeedom_id" != "" ] ; then
-                curl -s "http://${jeedom_ip}/core/api/jeeApi.php?plugin=virtual&apikey=${jeedom_apikey}&type=virtual&id=${jeedom_id}&value=${value}"
+                curl -s "http://${jeedom_ip}/core/api/jeeApi.php?plugin=virtual&type=event&apikey=${jeedom_apikey}&id=${jeedom_id}&value=${value}"
         fi
 done < <(echo "$list_index")
 
