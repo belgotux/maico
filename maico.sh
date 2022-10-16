@@ -18,8 +18,8 @@ source $confdir/mapping_virtual_jeedom.conf
 
 #dependances
 if [ ! -f /usr/bin/curl ] ; then        echo "Error : curl not present, install curl" ; exit 1 ; fi
-if [ ! -f /usr/bin/iconv ] ; then       echo "Error : curl not present, install libc-bin" ; exit 1 ; fi
-if [ ! -f /usr/bin/xmllint ] ; then     echo "Error : curl not present, install libxml2-utils" ; exit 1 ; fi
+if [ ! -f /usr/bin/iconv ] ; then       echo "Error : iconv not present, install libc-bin" ; exit 1 ; fi
+if [ ! -f /usr/bin/xmllint ] ; then     echo "Error : xmllint not present, install libxml2-utils" ; exit 1 ; fi
 
 xml_details=$(curl -s --basic --user admin: http://$ip_maico/details.cgx | iconv -f ISO-8859-1 -t utf8 | sed -e 's/marche/1/g' -e 's/arrêt/0/g' -e 's/fermé/0/g' -e 's/ouvert/1/g')
 xml_index=$(curl -s --basic --user admin: http://$ip_maico/index.cgx | iconv -f ISO-8859-1 -t utf8 )
